@@ -1,0 +1,13 @@
+#bot:Space (an OWL Class)-------REF:§ 3.3.2.5 -------------------------------------------------------
+bot:testSpace
+    a sh:NodeShape;
+    sh:targetClass bot:Space;                                                    # Direct constraints for targetClass itself- sh:closed, sh:and, sh:or, sh:not
+    sh:property[
+        sh:path bot:Space;
+        sh:name "Which Space";
+        sh:description "The name of the Space.";
+        sh:datatype xsd:string;
+        sh:minCount 1;
+        sh:message "The Space should contain a name";
+        sh:disjoint bot:Site, bot:Building, bot:Storey;
+    ]

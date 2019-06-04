@@ -1,0 +1,12 @@
+#bot:hasBuilding (an OWL Object Property)-------REF:§ 3.3.2.7 -------------------------------------------------------
+bot:testhasBuilding
+    a sh:NodeShape;
+    sh:closed true;
+    sh:property[
+        sh:path bot:hasBuilding;
+        sh:name "Which Building is present in the bot:Zone/bot:Space/bot:Building/bot:Site";
+        sh:description "The name of the Building.";
+        sh:datatype xsd:string;
+        sh:minCount 1;
+        sh:message "The Zone/Space/Building/Site should contain a building name";
+    ]

@@ -1,0 +1,12 @@
+#bot:containsZone (an OWL Object Property)-------REF:§ 3.3.2.6 -------------------------------------------------------
+bot:testZone
+    a sh:NodeShape;
+    sh:closed true;                                       
+    sh:property[
+        sh:path bot:containsZone;
+        sh:name "Which Zone";
+        sh:description "The name of the Zone contained.";
+        sh:datatype xsd:string;
+        sh:minCount 1;
+        sh:message "The Zone should contain another zone.";
+    ].

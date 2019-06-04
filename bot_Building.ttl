@@ -1,0 +1,13 @@
+#bot:Building (an OWL Class)-------REF:§ 3.3.2.3 -------------------------------------------------------
+bot:testBuilding
+    a sh:NodeShape;
+    sh:targetClass bot:Building, bot:Zone;                                                    # Direct constraints for targetClass itself- sh:closed, sh:and, sh:or, sh:not
+    sh:property[
+        sh:path bot:Building;
+        sh:name "Which Building";
+        sh:description "The name of the Building.";
+        sh:datatype xsd:string;
+        sh:minCount 1;
+        sh:message "The Building should contain a name";
+        sh:disjoint bot:Site, bot:Storey, bot:Space;
+    ]

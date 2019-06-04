@@ -1,0 +1,12 @@
+#bot:adjacentZone (an OWL Object Property)-------REF:§ 3.3.2.10 -------------------------------------------------------
+bot:testadjacentZone
+    a sh:NodeShape;
+    sh:property[
+        sh:path bot:adjacentZone;
+        sh:name "Which Zone/building/storey/space is adjacent ?";
+        sh:description "The name of the adjacent Zone/Building/Storey/Space.";
+        sh:datatype xsd:string;
+        sh:minCount 1;
+        sh:message "The Zone/Building/Storey should contain a name";
+        sh:disjoint bot:intersectsZone;
+    ]

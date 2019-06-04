@@ -1,0 +1,11 @@
+#bot:hasSpace (an OWL Object Property)-------REF:§ 3.3.2.9 -------------------------------------------------------
+bot:testhasSpace
+    a sh:NodeShape;
+    sh:property[
+        sh:path bot:hasSpace;
+        sh:name "Which Space is present in the bot:Zone/bot:Building/bot:Storey/bot:Space";
+        sh:description "The name of the Space.";
+        sh:datatype xsd:string;
+        sh:minCount 1;
+        sh:message "The Zone/Building/Storey/Space should contain a Space name";
+    ]

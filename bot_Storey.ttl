@@ -1,0 +1,13 @@
+#bot:Space (an OWL Class)-------REF:§ 3.3.2.4 -------------------------------------------------------
+bot:testStorey
+    a sh:NodeShape;
+    sh:targetClass bot:Storey, bot:Zone;                                                    # Direct constraints for targetClass itself- sh:closed, sh:and, sh:or, sh:not
+    sh:property[
+        sh:path bot:Storey;
+        sh:name "Which Storey";
+        sh:description "The name of the Storey.";
+        sh:datatype xsd:string;
+        sh:minCount 1;
+        sh:message "The Storey should contain a name";
+        sh:disjoint bot:Site, bot:Building, bot:Space;
+    ]

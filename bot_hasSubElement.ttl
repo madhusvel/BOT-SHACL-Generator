@@ -1,0 +1,10 @@
+ #bot:hasSubElement(an OWL Class)-------REF:§ 3.4.2.2-------------------------------------------------------
+ bot:testhasSubElement
+    a sh:NodeShape;
+    sh:property[
+        sh:path bot:hasSubElement;
+        sh:name "Sub Element Name";
+        sh:description "The name of the sub element.";
+        sh:datatype xsd:string;
+        sh:minCount 1;
+    ]

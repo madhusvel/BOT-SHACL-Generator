@@ -1,0 +1,12 @@
+#bot:hasStorey (an OWL Object Property)-------REF:§ 3.3.2.8 -------------------------------------------------------
+bot:testhasStorey
+    a sh:NodeShape;
+    sh:closed true;                                                # Direct constraints for targetClass itself- sh:closed, sh:and, sh:or, sh:not
+    sh:property[
+        sh:path bot:hasStorey;
+        sh:name "Which Storey is present in the bot:Zone/bot:Building/bot:Storey";
+        sh:description "The name of the Storey.";
+        sh:datatype xsd:string;
+        sh:minCount 1;
+        sh:message "The Zone/Building/Storey should contain a storey name";
+    ]

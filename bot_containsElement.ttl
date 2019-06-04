@@ -1,0 +1,10 @@
+ #bot:containsElement(an OWL Object Property)-------REF:§ 3.4.2.4-------------------------------------------------------
+ bot:testcontainsElement
+    a sh:NodeShape;
+    sh:property[
+        sh:path bot:containsElement;
+        sh:name "Element Name";
+        sh:description "The name of the element.";
+        sh:datatype xsd:string;
+        sh:minCount 1;
+    ]

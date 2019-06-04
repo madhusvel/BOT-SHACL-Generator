@@ -1,0 +1,13 @@
+#bot:Site (an OWL Class)-------REF:§ 3.3.2.2 -------------------------------------------------------
+bot:testSite
+    a sh:NodeShape;
+    sh:targetClass bot:Site, bot:Site;
+    sh:property [
+        sh:path bot:Site;
+        sh:name "Name of the Site";
+        sh:datatype xsd:string;
+        sh:maxCount 1;                                                          # For linked data, should there be no maxCount? Since, the same class can be defined differently in different sources. 
+        sh:minCount 1;
+        sh:message "The Site should have a name!";
+        sh:disjoint bot:Building, bot:Storey, bot:Space;
+    ]
